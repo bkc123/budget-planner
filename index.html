@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Budget-Planner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Planner</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,27 +16,27 @@
         <div class="budget-section">
             <div class="budget col col-md col-sm">
                 <h2>budget</h2>
-                <img src="image/money-bad.svg" width="40" alt="" />
-                <p class="amount">$<span id="budgetAmount">0</span></p>
+                <img src="images/money.jpeg" width="40" alt="" />
+                <p class="amount">$ <span id="budgetAmount">0</span></p>
             </div>
-            <div class="Expense col col-md col-sm">
-                <h2>Expenses</h2>
-                <img src="image/accounting.svg" width="40" alt="" />
-                <p class="exp-amount">$<span id="ExpensesAmount">0</span></p>
+            <div class="expenses col col-md col-sm">
+                <h2>expenses</h2>
+                <img src="images/accounting.jpeg" width="40" alt="" />
+                <p class="exp-amount">$ <span id="expensesAmount">0</span></p>
             </div>
             <div class="balance col col-md col-sm">
-                <h2>budget</h2>
-                <img src="image/balance.svg" width="40" alt="" />
-                <p class="amount">$<span id="balanceAmount">0</span></p>
+                <h2>balance</h2>
+                <img src="images/balance.jpeg" width="40" alt="" />
+                <p class="amount bala">$ <span id="balanceAmount">0</span></p>
             </div>
         </div>
         <div id="displayExpenses">
             <div class="budget-list">
                 <div class="col">
-                    <h4>Expenses topic</h4>
+                    <h4>expense title</h4>
                 </div>
                 <div class="col">
-                    <h4>Expense Cost</h4>
+                    <h4>expense value</h4>
                 </div>
                 <div class="col"></div>
             </div>
@@ -48,40 +46,57 @@
     <div class="toggle">
         <button id="myBtn" type="button">+</button>
     </div>
-    <div id="myModel" class="model">
-        <div class="model-content">
-            <div class="model-header">
+
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
                 <span class="close">&times;</span>
                 <h2>Budget Form</h2>
             </div>
-            <div class="model-body">
-                <div class="budget-form" id="budget-form">
+            <div class="modal-body">
+                <div class="budget-form" id="budgetform">
                     <form id="addForm">
-                        <label for="">Make a budget</label> <br/>
-                        <input type="number" id="number" /> </br>
-                        <button type="submit"> Add Budget</button>
+                        <label for=""> Make a budget</label> <br />
+                        <input type="number" id="number" /> <br />
+                        <button type="submit">Add Budget</button>
                     </form>
                 </div>
-                <div class="Expenses-form" id="expense-form">
+
+                <div class="expense-form" id="expense-form">
                     <form action="" id="expForm">
                         <div class="">
-                            <label for="">Enter your expense name</label> <br/>
-                            <input type="text" id="exName" />
+                            <label for="">Please title your expense name</label> <br />
+                            <input type="text" id="expName" />
                         </div>
                         <div class="">
-                            <label for="">Enter your expense amount</label> <br/>
+                            <label for="">Please enter expense Cost</label> <br />
                             <input type="number" id="expNumber" />
                         </div>
-                        <button type="submit" id="submitExpen">Add Expense</button>
+                        <button type="submit" id="submitExpen">Add expense</button>
                     </form>
                     <button onclick="callBudget()" id="bug">
-                    Back to add budget->
-                </button>
+              Back to add budget ->
+            </button>
+                </div>
+
+                <div class="edit-form" id="editForm">
+                    <form action="" id="saveEdit">
+                        <div class="">
+                            <label for="">Edit your expense</label> <br />
+                            <input type="text" id="editExpName" />
+                        </div>
+                        <div class="">
+                            <label for="">Edit expense amount</label> <br />
+                            <input type="number" id="editExpNumber" />
+                        </div>
+                        <button type="submit">Save changes</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 
